@@ -1,0 +1,70 @@
+@import "../../styles/main.scss";
+
+.endGameOverlay {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+
+    .blurBackground {
+        filter: blur(50px);
+        pointer-events: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .centeredDiv {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        z-index: 3000;
+        text-align: center;
+        margin-bottom: 1rem;
+        .text{
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-size: 2rem;
+        }
+
+        .playersCnt{
+            margin:.5rem 0;
+            .player1{
+                color:$blue;
+                margin: .5rem 0 ;
+            }
+
+            .player2{
+                color: $purple;
+            }
+        }
+
+        .newGameBtn {
+            display: block;
+            padding: 0.8rem 1.2rem;
+            background-color: $purple ;
+            color: white;
+            border: none;
+            border-radius: 999px;
+            cursor: pointer;
+            margin: 0 auto;
+            transition: background .5s ease;
+    
+            &:hover {
+                background-color: $blue;
+            }
+        }
+    }
+
+
+}
